@@ -4,3 +4,7 @@ body {
 h1{
     text-align: center;
 }
+#newKeys{
+    font-size: 20vh;
+    text-align: center;
+}
