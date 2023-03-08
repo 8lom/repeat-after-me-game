@@ -18,4 +18,5 @@ and if its incorrect player is game over
 ### milestone 3
 - random sequence 
 
-### milestone 3
+### milestone 4
+- level up, continue game 
