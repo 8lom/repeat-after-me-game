@@ -1,9 +1,10 @@
 class Game{
   constructor() {
     this.createStartButton()
-    this.createDisplay()
     this.createScoreboard()
-    this.countLevel=5
+    this.createDisplay()
+    
+    
 
     
 }
@@ -36,8 +37,9 @@ createScoreboard(){
   const scoreboard = document.createElement("div");
   // step2: add content (ex. innerText) and/or modify attributes
   scoreboard.setAttribute("id","scoreboard")
+  scoreboard.className= "scoreboard"
   
-  scoreboard.innerHTML="<span> level: </span>"
+  scoreboard.innerHTML="<span> Points: 0 </span>"
   
   //step3: append to the dom
   const boardElm = document.getElementById("board");
@@ -53,10 +55,7 @@ attachEventListenerButton(){
 }
 
 
-countLevel(){
-  this.countLevel++
-  console.log("level" + this.countLevel)
-}
+
 }
 
 
@@ -66,6 +65,7 @@ class Keys {
     this.newSequenceArr = [];
     this.keysPressed = [];
     this.boundPressKeys=this.pressKeys.bind(this)
+    
     this.keys= [
       {name: "ArrowLeft", image:"<"},
       {name: "ArrowRight", image: ">"},
@@ -73,11 +73,19 @@ class Keys {
       {name: "ArrowDown", image: "v"}
     ]
     
+    this.level=1
     this.createNewSequence()
+  }
+
+  countLevel(){
+    this.level++ 
+    let levelElm= document.querySelector(".scoreboard span")
+    
+    scoreboard.innerHTML= "Points: " + this.level *123
   }
   createNewSequence() {
     
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < this.level; i++) {
       let random=(Math.floor(Math.random()*4))
       this.newSequenceArr.push(this.keys[random])
   }
@@ -103,15 +111,18 @@ class Keys {
       
       if (index === this.newArr.length){
         clearInterval(intervalShow)
-        showElm.innerHTML="Repeat"
-        this.attachEventListenerKeys()
-        console.log(index)
+        
+        
+        setTimeout(() => {
+          showElm.innerHTML="GO"
+          this.attachEventListenerKeys()
+        }, 2100);
       }
       
       setTimeout(() => {
         showElm.innerHTML=""
-      }, 1800);
-    }, 2000);
+      }, 2300);
+    }, 2500);
 
     }
     
@@ -143,6 +154,8 @@ compareInputAndArr() {
       this.newArr=[]
       this.newSequenceArr=[]
       this.keysPressed=[]
+
+      this.countLevel()
 
       
       this.removeEventListenerKeys()
