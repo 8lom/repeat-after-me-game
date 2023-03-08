@@ -1,0 +1,37 @@
+
+body{
+    background-color: rgb(0, 0, 0);
+    background-size: 1000px;
+}
+#game-over{
+    /*background-image: url();
+    background-size: 
+    */
+    
+    font-size: 60px;
+    
+}
+
+a:link{text-decoration: none;}
+p {
+    font-size: 30vh;
+}
+
+div a{
+    display:block;
+    animation: weeee 5s linear infinite alternate;
+  }
+
+ div p {
+    display:block;
+    animation: weeee 3s linear infinite alternate;
+  }
+  
+  @keyframes weeee {
+     0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+   100% { transform: translateX(101%); color: purple; }
+  }
+

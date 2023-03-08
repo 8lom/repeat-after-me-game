@@ -160,10 +160,12 @@ compareInputAndArr() {
       
       this.removeEventListenerKeys()
       this.createNewSequence()
-    } else{console.log("game over");
+    } else{
       this.newArr=[]
       this.newSequenceArr=[]
       this.keysPressed=[]
+
+      window.location.href ="./gameover.html"
     //console.log(newSequenceArr);
     //console.log(keysPressed);
     }
