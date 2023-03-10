@@ -22,7 +22,7 @@ div a{
 
  div p {
     display:block;
-    animation: weeee 3s linear infinite alternate;
+    animation: weeee 3s linear infinite alt  ernate;
   }
   
   @keyframes weeee {

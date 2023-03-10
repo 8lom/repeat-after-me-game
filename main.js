@@ -54,7 +54,7 @@ class Game {
       this.createScoreboard();
       
       startButton.remove();
-      console.log("click");
+    
     });
   }
 }
@@ -93,8 +93,7 @@ class Keys {
     }
     this.newArr = this.newSequenceArr.map((key) => key.name);
     this.imageArr = this.newSequenceArr.map((key) => key.image);
-    console.log("computer in createnewSequence", this.newSequenceArr);
-    console.log("comparison in imageArr", this.imageArr);
+    
     this.showNewSequence();
     
   }
@@ -103,7 +102,7 @@ class Keys {
   showNewSequence() {
     let index = 0;
 
-    console.log("computer in interval", this.newArr);
+   
     const interval = setInterval(() => {
       const image = document.createElement("img");
       image.className = "center";
@@ -117,7 +116,7 @@ class Keys {
       }, 2100);
 
       if (index === this.imageArr.length) {
-        console.log("clear interval");
+      
         setTimeout(() => {
         this.attachEventListenerKeys()
 
@@ -140,15 +139,14 @@ class Keys {
   }
 
   pressKeys(event) {
-    console.log(this);
-    console.log("event.key" + event.key);
+    
     this.keysPressed.push(event.key);
   }
 
   attachEventListenerKeys() {
-    console.log("eventlistener");
+    
     document.addEventListener("keydown", this.boundPressKeys);
-    console.log("player", this.keysPressed);
+    
 
     setTimeout(() => {
       this.compareInputAndArr();
@@ -193,8 +191,7 @@ class Keys {
         window.location.href ="./gameover.html"
       }, 700);
       
-      //console.log(newSequenceArr);
-      //console.log(keysPressed);
+      
     }
   }
 }
@@ -205,105 +202,3 @@ const newGame = new Game();
 
 
 
-/*  console.log((this.newArr[i]))
-      if (this.newArr[i]==="ArrowUp"){
-        console.log("up")
-        setTimeout(() => {
-        this.createImageUp()
-        setTimeout(() => {
-          const removeImageUp= document.getElementById("imageUp")
-        removeImageUp.remove();
-        }, 2400);
-      }, 2500 * i);
-      }
-      else if (this.newArr[i]==="ArrowDown"){
-        console.log("down")
-        setTimeout(() => {
-        this.createImageDown()
-        setTimeout(() => {
-          const removeImageDown= document.getElementById("imageDown")
-        removeImageDown.remove();
-        }, 2400);
-      }, 2500*i);
-      }
-      else if (this.newArr[i]==="ArrowLeft"){
-        console.log("Left")
-        setTimeout(() => {
-        this.createImageLeft()
-        setTimeout(() => {
-          const removeImageLeft= document.getElementById("imageLeft")
-        removeImageLeft.remove();
-        }, 2400* i);
-      }, 2500 *i);
-      }
-      else if(this.newArr[i]==="ArrowRight"){
-        console.log("right")
-        setTimeout(() => {
-          this.createImageRight()
-        setTimeout(() => {
-          const removeImageRight= document.getElementById("imageRight") 
-        removeImageRight.remove()
-        }, 2400 )
-      },2500 *i);
-      }
-    }
-    if (i === this.newArr.length) {
-      console.log('end interval')
-      clearInterval(intervalShow);
-
-
-      setTimeout(() => {
-        this.attachEventListenerKeys();
-
-      }, 1900)
-    }
-       //showElm.innerHTML= this.newArr[index];
-      //index++
-      
-      /*setTimeout(() => {
-        const removeImageUp= document.getElementById("imageUp")
-        removeImageUp.remove();
-        const removeImageDown= document.getElementById("imageDown")
-        removeImageDown.remove();
-        const removeImageLeft= document.getElementById("imageLeft")
-        removeImageLeft.remove();
-        const removeImageRight= document.getElementById("imageRight") 
-        removeImageRight.remove()
-        
-      }, 2400);
-      */
-
-    //}, 2500);
-
-
-  /*createImageUp(){
-    const imageUp = document.createElement("img")
-    imageUp.className= "center"
-    imageUp.setAttribute("id", "imageUp")
-    imageUp.src= this.imageArr[i] //"./images/arrowup.png"
-    document.getElementById("board").appendChild(imageUp)
-  }
-  createImageDown(){
-    const imageDown = document.createElement("img")
-    imageDown.className="center"
-    imageDown.setAttribute("id", "imageDown")
-    imageDown.src= "./images/arrowdown.png"
-    document.getElementById("board").appendChild(imageDown)
-  }
-
-  createImageLeft(){
-    const imageLeft= document.createElement("img")
-    imageLeft.className="center"
-    imageLeft.setAttribute("id", "imageLeft")
-    imageLeft.src="./images/arrowleft.png"
-    document.getElementById("board").appendChild(imageLeft)
-  }
-
-  createImageRight(){
-    const imageRight= document.createElement("img")
-    imageRight.className="center"
-    imageRight.setAttribute("id", "imageRight")
-    imageRight.src="./images/arrowright.png"
-    document.getElementById("board").appendChild(imageRight)
-  }
-  */
