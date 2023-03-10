@@ -1,4 +1,4 @@
-# repeat-after-me-game
+# Repeat-after-me-game
 
 ## project
  repeat after me is a game where the player has to repeat a sequence of arrow keys that where shown on the screen. 
