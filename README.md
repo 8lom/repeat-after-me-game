@@ -1,22 +1,14 @@
 # repeat-after-me-game
 
-## MVP
-- display keys for x time
-- player can insert keycommands to repeat the sequence 
-- when keycommands is incorrect player is game over
+## project
+ repeat after me is a game where the player has to repeat a sequence of arrow keys that where shown on the screen. 
+ 
+ [Screenshot](https://user-images.githubusercontent.com/122740584/224292484-6b48e4ec-d07e-44b6-8770-c4c5f5459309.png)
 
-### miletone 1
-- show keys for x time
-    - class keys
-    - function showKeys, interval to remove
-    - images that are shown
 
-### milestone 2
-- player can insert keycommands to repeat te sequence 
-and if its incorrect player is game over
+## How to play
+  use the arrow keys to repeat the sequence.
 
-### milestone 3
-- random sequence 
+## Demo
+[Press here to try](https://8lom.github.io/repeat-after-me-game/)
 
-### milestone 4
-- level up, continue game 
